@@ -770,7 +770,7 @@ BOOST_CGI_NAMESPACE_BEGIN
         implementation_type& impl, const MutableBuffersType& buf
       , boost::system::error_code& ec)
     {
-      std::size_t bytes_read
+      std::size_t bytes_read __attribute__((__unused__))
         = read(*impl.client_.connection(), buf
               , boost::asio::transfer_all(), ec);
 

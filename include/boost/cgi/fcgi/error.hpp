@@ -136,7 +136,7 @@ inline const boost::system::error_category& get_fcgi_category()
   return instance;
 }
 
-static const boost::system::error_category& fcgi_category
+static const boost::system::error_category& fcgi_category __attribute__((__unused__))
   = ::BOOST_CGI_NAMESPACE::fcgi::error::get_fcgi_category();
 
   } // namespace error

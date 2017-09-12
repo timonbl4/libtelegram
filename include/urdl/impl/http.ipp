@@ -146,7 +146,7 @@ const boost::system::error_category& error_category()
 
 namespace detail {
 
-static const boost::system::error_category& category_instance
+static const boost::system::error_category& category_instance __attribute__((__unused__))
   = error_category();
 
 } // namespace detail

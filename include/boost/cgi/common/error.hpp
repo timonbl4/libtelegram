@@ -121,7 +121,7 @@ inline const boost::system::error_category& get_cgi_category()
   return instance;
 }
 
-static const boost::system::error_category& cgi_category
+static const boost::system::error_category& cgi_category __attribute__((__unused__))
   = ::BOOST_CGI_NAMESPACE::common::error::get_cgi_category();
 
   } // namespace error
