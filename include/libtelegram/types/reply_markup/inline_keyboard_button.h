@@ -4,7 +4,7 @@
 #include <experimental/optional>
 //#include <experimental/variant>
 
-namespace telegram::types::reply_markup {
+namespace telegram { namespace types { namespace reply_markup {
 
 struct inline_keyboard_button {
   std::string text;                                                             // Label text on the button.
@@ -82,6 +82,6 @@ inline void inline_keyboard_button::get(nlohmann::json &tree) const {
   }
 }
 
-}
+} } }
 
 #endif // TELEGRAM_TYPES_REPLY_MARKUP_INLINE_KEYBOARD_BUTTON_H_INCLUDED

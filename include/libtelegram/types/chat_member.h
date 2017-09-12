@@ -1,7 +1,7 @@
 #ifndef TELEGRAM_TYPES_CHAT_MEMBER_H_INCLUDED
 #define TELEGRAM_TYPES_CHAT_MEMBER_H_INCLUDED
 
-namespace telegram::types {
+namespace telegram { namespace types {
 
 struct chat_member {
   /// See https://core.telegram.org/bots/api#chatmember
@@ -48,6 +48,6 @@ chat_member const chat_member::from_json(nlohmann::json const &tree, std::string
   return from_json(tree.at(path));
 }
 
-}
+} }
 
 #endif // TELEGRAM_TYPES_CHAT_MEMBER_H_INCLUDED

@@ -12,7 +12,7 @@
 #include "urdl/istream.hpp"
 #include "urdl/http.hpp"
 
-namespace telegram::types {
+namespace telegram { namespace types {
 
 struct file {
   /// See https://core.telegram.org/bots/api#file
@@ -81,6 +81,6 @@ inline std::vector<char> file::download(std::string const &token) const {
   return out;
 }
 
-}
+} }
 
 #endif // TELEGRAM_TYPES_FILE_H_INCLUDED

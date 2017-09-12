@@ -4,7 +4,7 @@
 #include <thread>
 #include "libtelegram/types/types.h"
 
-namespace telegram::listener {
+namespace telegram { namespace listener {
 
 template<typename T>
 class base {
@@ -394,6 +394,6 @@ void base<T>::execute_callbacks(nlohmann::json const &tree) {
   }
 }
 
-}
+} }
 
 #endif // TELEGRAM_LISTENERS_BASE_H_INCLUDED

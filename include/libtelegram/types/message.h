@@ -6,7 +6,7 @@
 #include "user.h"
 #include "chat.h"
 
-namespace telegram::types {
+namespace telegram { namespace types {
 
 struct message {
   /// See https://core.telegram.org/bots/api#message
@@ -89,6 +89,6 @@ message const message::from_json(nlohmann::json const &tree, std::string const &
   return from_json(tree.at(path));
 }
 
-}
+} }
 
 #endif // TELEGRAM_TYPES_MESSAGE_H_INCLUDED

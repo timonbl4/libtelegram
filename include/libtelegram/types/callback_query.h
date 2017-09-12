@@ -5,7 +5,7 @@
 #include "user.h"
 #include "message.h"
 
-namespace telegram::types {
+namespace telegram { namespace types {
 
 struct callback_query {
   /// See https://core.telegram.org/bots/api#callbackquery
@@ -42,6 +42,6 @@ callback_query const callback_query::from_json(nlohmann::json const &tree, std::
   return from_json(tree.at(path));
 }
 
-}
+} }
 
 #endif // TELEGRAM_TYPES_CALLBACK_QUERY_H_INCLUDED

@@ -3,7 +3,7 @@
 
 #include <json.hpp>
 
-namespace telegram::types::reply_markup {
+namespace telegram { namespace types { namespace reply_markup {
 
 template<typename T>
 struct base {
@@ -17,6 +17,6 @@ inline void base<T>::get(nlohmann::json &tree) const {
   static_cast<T const *>(this)->get(tree);
 }
 
-}
+} } }
 
 #endif // TELEGRAM_TYPES_REPLY_MARKUP_BASE_H_INCLUDED

@@ -1,7 +1,7 @@
 #ifndef TELEGRAM_TYPES_USER_H_INCLUDED
 #define TELEGRAM_TYPES_USER_H_INCLUDED
 
-namespace telegram::types {
+namespace telegram { namespace types {
 
 struct user {
   int_fast32_t id = 0;                                                          // Unique identifier for this user or bot
@@ -27,6 +27,6 @@ user const user::from_json(nlohmann::json const &tree, std::string const &path) 
   return from_json(tree.at(path));
 }
 
-}
+} }
 
 #endif // TELEGRAM_TYPES_USER_H_INCLUDED

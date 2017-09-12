@@ -4,7 +4,7 @@
 #include "base.h"
 #include "inline_keyboard_button.h"
 
-namespace telegram::types::reply_markup {
+namespace telegram { namespace types { namespace reply_markup {
 
 struct inline_keyboard_markup final : base<inline_keyboard_markup> {
   /// See https://core.telegram.org/bots/api/#inlinekeyboardmarkup
@@ -26,6 +26,6 @@ inline void inline_keyboard_markup::get(nlohmann::json &tree) const {
   }
 }
 
-}
+} } }
 
 #endif // TELEGRAM_TYPES_REPLY_MARKUP_INLINE_KEYBOARD_MARKUP_H_INCLUDED
